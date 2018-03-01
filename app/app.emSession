@@ -44,7 +44,9 @@
   <Trace enabled="Yes"/>
  </TraceWindow>
  <Watch1>
-  <Watches active="1" update="Never"/>
+  <Watches active="1" update="Never">
+   <Watchpoint numelements="256" expression="SIM7100_Raw" evalMode="2" name="SIM7100_Raw" radix="1" linenumber="116" filename="Src/main.c" list=""/>
+  </Watches>
  </Watch1>
  <Watch2>
   <Watches active="0" update="Never"/>
@@ -56,7 +58,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="40" useTextEdit="1" useBinaryEdit="0" left="0" path="Src/main.c" debugPath="Src/main.c" selected="1" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="118" useTextEdit="1" useBinaryEdit="0" left="0" path="Src/main.c" debugPath="Src/main.c" selected="1" top="123" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="app" fileDialogDefaultFilter="*.asm;*.s;*.inc" autoConnectTarget="J-Link" buildConfiguration="Debug" debugSearchFileMap="" fileDialogInitialDirectory="/home/morris/Templates/STM32F103VE/app/Startup" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
