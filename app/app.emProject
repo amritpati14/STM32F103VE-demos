@@ -105,6 +105,7 @@
       <file file_name="Src/stm32f1xx_hal_msp.c" />
       <file file_name="Src/stm32f1xx_it.c" />
       <file file_name="Src/system_stm32f1xx.c" />
+      <file file_name="Src/sim_util.c" />
     </folder>
     <folder Name="System Files">
       <file file_name="Startup/STM32F103xx_Vectors.s" />

@@ -40,6 +40,7 @@
 #include "stm32f1xx_hal.h"
 
 /* USER CODE BEGIN Includes */
+#include "sim_util.h"
 #include <stdio.h>
 #include <stdlib.h>
 /* USER CODE END Includes */
@@ -51,8 +52,7 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-static uint8_t SIM7100_Raw[256] = {0};
-static uint8_t SIM7100_RawPtr = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -67,11 +67,7 @@ static void MX_USART2_UART_Init(void);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-  SIM7100_RawPtr++;
-  HAL_UART_Receive_IT(huart,SIM7100_Raw+SIM7100_RawPtr,1);
-}
+
 /* USER CODE END 0 */
 
 /**
@@ -111,10 +107,12 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  printf("Hello World\n");
-  HAL_UART_Receive_IT(&huart2,SIM7100_Raw+SIM7100_RawPtr,1);
-  uint8_t at_cmd1[] = "AT+CGMM\r\n";
-  HAL_UART_Transmit_IT(&huart2,at_cmd1,sizeof(at_cmd1)-1);
+  uint8_t* response = NULL;
+  int8_t ret = sim_send_command("AT+CGMM\r\n",&response);
+  if(!ret)
+  {
+    printf("%s",response);
+  }
   while (1) {
 
   /* USER CODE END WHILE */

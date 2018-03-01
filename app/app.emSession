@@ -23,6 +23,7 @@
  <Project>
   <ProjectSessionItem path="app"/>
   <ProjectSessionItem path="app;app"/>
+  <ProjectSessionItem path="app;app;HAL"/>
   <ProjectSessionItem path="app;app;RTT Files"/>
   <ProjectSessionItem path="app;app;Script Files"/>
   <ProjectSessionItem path="app;app;Source Files"/>
@@ -45,7 +46,8 @@
  </TraceWindow>
  <Watch1>
   <Watches active="1" update="Never">
-   <Watchpoint numelements="256" expression="SIM7100_Raw" evalMode="2" name="SIM7100_Raw" radix="1" linenumber="116" filename="Src/main.c" list=""/>
+   <Watchpoint numelements="256" expression="SIM7100_Raw" evalMode="2" name="SIM7100_Raw" radix="1" linenumber="117" filename="Src/main.c" list=""/>
+   <Watchpoint numelements="0" expression="SIM7100_RawPtr" evalMode="0" name="SIM7100_RawPtr" radix="-1" linenumber="26" filename="Src/sim_util.c" list=""/>
   </Watches>
  </Watch1>
  <Watch2>
@@ -58,7 +60,10 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="118" useTextEdit="1" useBinaryEdit="0" left="0" path="Src/main.c" debugPath="Src/main.c" selected="1" top="123" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="3" y="120" useTextEdit="1" useBinaryEdit="0" left="0" path="Src/main.c" debugPath="Src/main.c" selected="0" top="88" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="23" useTextEdit="1" useBinaryEdit="0" left="0" path="Src/sim_util.c" debugPath="Src/sim_util.c" selected="1" top="12" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="2" useTextEdit="1" useBinaryEdit="0" left="0" path="Inc/sim_util.h" debugPath="Inc/sim_util.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="814" useTextEdit="1" useBinaryEdit="0" left="0" path="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" debugPath="Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c" selected="0" top="807" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="app" fileDialogDefaultFilter="*.asm;*.s;*.inc" autoConnectTarget="J-Link" buildConfiguration="Debug" debugSearchFileMap="" fileDialogInitialDirectory="/home/morris/Templates/STM32F103VE/app/Startup" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
